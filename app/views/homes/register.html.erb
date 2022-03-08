@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang=en-gb>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>Working time</h1>
+  </header>
+  <main>
+    <p>Please enter your working time in details</p>
+    <%= form_for(@home) do |f| %>
+      <p>
+      <%= f.label :time, "time" %>
+      <%= f.text_field :time %> hours  
+      </p>  
+      <p>
+      <%= f.label :salary, "salary (per an hour)" %>
+      <%= f.text_field :salary %> yen
+      </p>
+      <p>
+      <%= f.label :transfer, "transportation" %>
+      <%= f.text_field :transfer %> yen
+      </p>
+      <%= f.label :amount_money, "amount" %>
+      <%= f.text_field :amount_money %> yen      
+      <p>
+      <%= f.label :text, "explain" %>
+      <%= f.text_field :text %>
+      </p>
+      <br>
+      <%= f.submit 'submit' %>
+    <% end %>
+  </main>
+  <footer>
+    <small>&copy; 2022 Kota Matsuzawa</small>
+  </footer>
+</body>
+</html>

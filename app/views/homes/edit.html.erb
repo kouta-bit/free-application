@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=en-gb>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>Edit</h1>
+  </header>
+  <main>
+    <%= form_for @home do |f| %>
+      <%= f.label :start_time, "start time" %>
+      <%= f.datetime_field :start_time %>
+      <br>
+      <%= f.label :end_time, "end time" %>
+      <%= f.datetime_field :end_time %>      
+      <br>
+      <%= f.label :text, "explain" %>
+      <%= f.text_field :text %>
+      <br>
+      <%= f.label :transfer, "transportation" %>
+      <%= f.check_box :transfer %>  
+      <br>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>

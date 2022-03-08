@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang=en-gb>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h2>JobManagementApplication</h2>
+  </header>
+  <main>
+    <p>This is application for managing working time</p>
+    <%= link_to 'sign up', new_user_registration_path, class: "sign_up"  %>
+    <%= link_to 'log in', new_user_session_path, class: "sign_in" %>
+  </main>
+  <footer>
+    <small>&copy; 2022 Kota Matsuzawa</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang=en-gb>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+  </header>
+  <main>
+    <table border = "1">
+      <thead>
+        <tr>
+          <th>time</th>
+          <th>money</th>
+        </tr>
+      </thead>
+      <tr>
+        <td><%= @time %> hours</td>
+        <td><%= @money %> yen</td>
+        <br>
+      </tr>
+    </table>
+      <%= month_calendar homes: @homes do |date, home| %>
+      <%= link_to date.day, homes_register_path %>
+      <br>
+      <% home.each do |h| %>
+      <% end %>
+    <% end %>
+    <%= link_to 'Edit Profile', edit_user_registration_path %>
+    <%= link_to 'log out', destroy_user_session_path, class: "dropdown_item", method: :delete %>
+  </main>
+  <footer>
+    <small>&copy; 2022 Kota Matsuzawa</small>
+  </footer>
+</body>
+</html>
