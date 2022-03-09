@@ -9,19 +9,6 @@ class HomesController < ApplicationController
     @home = Home.new
   end
   
-  def edit
-    @home = Home.find(params[:id])
-  end
-  
-  def update
-    @home = Home.find(params[:id])
-    if @home.update(homes_params)
-      redirect_to homes_home_path
-    else 
-      render edit
-    end
-  end 
-  
   def create
     @home = Home.new(homes_params)
     if @home.save

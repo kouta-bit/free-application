@@ -25,9 +25,7 @@
       <%= month_calendar homes: @homes do |date, home| %>
       <%= link_to date.day, homes_register_path %>
       <br>
-      <% home.each do |h| %>
-      <% end %>
-    <% end %>
+    　<% end %>
     <%= link_to 'Edit Profile', edit_user_registration_path %>
     <%= link_to 'log out', destroy_user_session_path, class: "dropdown_item", method: :delete %>
   </main>
